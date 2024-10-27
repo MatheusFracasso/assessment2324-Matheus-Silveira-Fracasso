@@ -1,5 +1,5 @@
 Student name: Matheus Silveira Fracasso
 Student number: 725283
 Student class: HAIT24FT1B (B)
-GitHub Repository: your github repository URL
+GitHub Repository: https://github.com/MatheusFracasso?tab=repositories
 GitHub Pages URL: your github pages URL
