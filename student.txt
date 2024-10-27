@@ -2,4 +2,22 @@ Student name: Matheus Silveira Fracasso
 Student number: 725283
 Student class: HAIT24FT1B (B)
 GitHub Repository: https://github.com/MatheusFracasso?tab=repositories
-GitHub Pages URL: your github pages URL
+
+GitHub Pages URL:
+1)index page:
+https://matheusfracasso.github.io/assessment2324-Matheus-Silveira-Fracasso/index.html
+
+2)BBQ best spots:
+https://matheusfracasso.github.io/assessment2324-Matheus-Silveira-Fracasso/bbqbestspots.html
+
+3) Noorderpark tips:
+https://matheusfracasso.github.io/assessment2324-Matheus-Silveira-Fracasso/noorderparktips.html
+
+4) Prepare for the BBQ:
+https://matheusfracasso.github.io/assessment2324-Matheus-Silveira-Fracasso/preparefortheBBQ.html
+
+5) BBQ rules:
+https://matheusfracasso.github.io/assessment2324-Matheus-Silveira-Fracasso/bbqrules.html
+
+6)Contact page:
+https://matheusfracasso.github.io/assessment2324-Matheus-Silveira-Fracasso/contact.html
