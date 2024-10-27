@@ -1,0 +1,926 @@
+/* GENERAL STYLE AREA*/ 
+
+/* I started my project using everything in px, but after learning about the benefits of rem, I've tried to adapt my work by implementing it wherever possible. 
+   To make this adjustment, I converted many of my px values to rem by dividing each px value by 16 (as 1rem = 16px). */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+h1{
+    font-size: 24px; 
+    color: #000000; 
+    margin: 10px 30px;
+    text-align:left;
+    font-weight: bold;
+    display: flex;
+    justify-content:center ;
+}
+
+h2{
+    font-size: 22px; 
+    color: #000000; 
+    margin: 10px 30px;
+    text-align:left;
+    font-weight: bold;
+}
+
+h3{
+    font-size: 20px; 
+    color: #000000; 
+    margin: 10px 30px;
+    text-align:left;
+    font-weight: bold; 
+}
+
+p {
+    font-size: 16px; 
+    color: #000000; 
+    margin: 0.625rem 1.875rem;
+    text-align:left;
+    font-weight: 500;
+    
+}
+
+p::first-letter {
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.6;
+    text-indent: 1rem;
+    word-spacing: 0.1rem;
+}
+
+li, a, button {
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    font-size: 1.0rem;
+    color: #000000;
+    text-decoration: none;
+}
+h1, h2, h3 {
+    letter-spacing: 0.05rem; 
+}
+
+header {
+    background-color: rgba(216, 221, 207, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.875rem 10%;
+    flex-wrap: wrap; 
+}
+
+/* NAVBAR AREA*/
+
+.logo {
+    max-width: 7.5rem;
+    height: auto;
+    cursor: pointer;
+}
+
+/* General Styles to my navigation bar */
+.nav__links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.75rem;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0.0rem 1.25rem;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease;
+}
+.nav__links a:focus {
+    background-color: #DDDDDD; 
+}
+
+.nav__links a:active {
+    color: #FF5733; 
+}
+.nav__links li::after {
+    content: '';
+    width: 0%;
+    height: 0.125rem;
+    background: rgba(11, 42, 39, 1);
+    display: block;
+    margin: auto;
+}
+
+.nav__links li:hover::after {
+    width: 100%;
+}
+.nav__links a {
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.nav__links a:hover {
+    color: rgb(255, 255, 255);
+}
+
+nav > ul > li {
+    margin: 0 15px;
+}
+
+.cta {
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    background-color:rgb(45, 33, 13);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+   
+}
+
+.cta:hover {
+    background-color: rgb(139, 102, 0); 
+    border-color: rgb(255, 255, 255);   
+}
+
+@media (max-width: 768px) { 
+    /* I decided to wrap the lines when the screen get smaller and also reduce the gap */
+    .nav__links {
+        flex-wrap: wrap;
+        gap: 1.25rem; 
+    }
+    .logo {
+        margin-bottom: 0.625rem; 
+      
+    }
+   
+    button.cta {
+        width: 100%; 
+        text-align: center;
+    }
+
+  
+    header {
+        flex-direction: column;
+        align-items: flex-start; 
+    }
+}
+
+/* FOOT AREA*/
+
+.container {
+    max-width: 73.125rem;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+
+
+.footer {
+    background: #DADFD2;
+    padding: 2.5rem 0;
+}
+
+
+.footer-col {
+    width: 25%; 
+    padding: 0 0.9375rem;
+    align-items: center;
+}
+
+/* Styling for my list items */
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 0.625rem;
+}
+
+.footer-col ul li a {
+    font-size: 1.0rem;
+    text-transform: capitalize;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 0.625rem;
+}
+
+/* Footer column with the logo and copyright */
+.footer-col2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: right;
+}
+
+.footer-col2 .logo {
+    max-width: 6.25rem;
+    margin-bottom: 0.625rem;
+}
+
+/* Style fot the Copyright text */
+.footer p {
+    font-size: 12px;
+    margin: 100px 0;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .footer-col {
+        width: 45%; 
+        padding: 0 10px;
+    }
+    .footer-col2 {
+        align-items: center; 
+        text-align: center;
+    }
+    .footer p {
+        margin: 0;
+    }
+}.cookies-message {
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(163, 147, 147, 0.8); 
+    color: white;
+    padding: 16px;
+    z-index: 9999; 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cookies-message p {
+    margin: 0;
+}
+
+/* Green button */
+.cookies-message .accept-cookies {
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cookies-message .accept-cookies:hover {
+    background-color: #45a049; 
+}
+
+
+/* START OF THE BODY */
+
+.intro-image{
+    width: 100%; 
+    height: auto;
+    background-color: rgba(92, 147, 124, 1);
+    margin: 30px 0 0 0;  
+}
+
+.title-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    margin: 1.875rem;
+    padding: 1.25rem;
+    text-align: center; 
+}
+
+.main-headline {
+    font-size: 3rem; 
+}
+
+
+@media (max-width: 768px) {
+    .title-section {
+        height: auto; 
+        margin: 15px;
+        padding: 0.625rem;
+    }
+
+    .main-headline {
+        font-size: 2rem; 
+    }
+}
+
+.section-default {
+    display: flex;
+    background-color:rgba(92, 147, 124, 1);   
+    justify-content: center;
+    align-items: center; 
+    padding: 1.25rem;
+    margin: 1.875rem;
+    border-radius: 15px;
+}
+
+.section-default-var {
+    display: flex;
+    background: #DADFD2;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center; 
+    padding: 1.25rem;
+    margin: 1.875rem;
+}
+
+.image-default {
+    width: 22rem;
+    height: 24rem;
+    margin-right: 1rem;
+    object-fit: cover;
+    border-radius: 16px;    
+}
+
+.text-default {
+    max-width: 37.5rem;
+    padding: 1.25rem;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .section-default,
+.section-default-var {
+        flex-direction: column; 
+        align-items: center;
+    }
+ 
+/* As 18.75 = 300 px. I tested different sizes and I liked this one more*/
+    .image-default {
+        width: 18.75rem; 
+        height: auto; 
+        margin-bottom: 1.25rem; 
+    }
+
+    .text-default {
+        width: 100%; 
+        max-width: 100%;
+        text-align: center; 
+}
+}
+
+.comment-section {
+    display: flex;
+    flex-direction: column;   
+    padding: 1.25rem 15px;       
+    gap: 0.3125rem;                
+    width: 100%;              
+    max-width: 1179px;        
+    background: rgba(92, 147, 124, 1); 
+    border-radius: 15px;      
+    margin: 1.875rem auto;      
+    text-align: center;      
+}
+
+@media (max-width: 768px) {
+    .comment-section {
+        font-size: 1.25rem;      
+        padding: 15px 0.625rem;  
+        margin: 1.25rem auto;    
+    }
+}
+.comment-section h2 {
+    font-size: 1.5rem; 
+    margin-bottom: 0.5rem;
+    color: #000000;
+}
+
+.comment-section p {
+    font-size: 1rem; 
+    line-height: 1.6; /* As using line-height is required. It calculates as line-height * font size of the paragraph */
+    color: #000000; 
+}
+
+/* LINK STYLE IN MAP */
+
+.map-link {
+    color:  rgba(0, 0, 255, 1);                 
+    text-decoration: none;           
+                  
+}
+
+.map-link:hover {
+    text-decoration: underline;     
+}
+
+.intro-section, .facilities-pic {
+    padding: 2rem;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;   
+    padding: 1.25rem 15px;
+    gap: 0.3125rem;                
+    width: 100%;
+    max-width: 1179px;        
+    background: #D8DDCF;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    color: #000000;
+    margin: 1.875rem auto;       
+}
+
+.info-section-var {
+    display: flex;
+    flex-direction: column;   
+    padding: 1.25rem 15px;
+    gap: 0.3125rem;                 
+    width: 100%;
+    max-width: 1179px;      
+    background: rgba(92, 147, 124, 1);
+    border-radius: 15px;
+    font-size: 1.5rem;
+    color: #000000;
+    margin: 1.875rem auto;       
+}
+
+.advice-section{
+  
+    padding: 1.25rem 15px;
+    width: fit-content;
+    background: rgba(92, 147, 124, 1);
+    border-radius: 15px;
+    border-width: 0.5rem;
+    border-style: dotted;
+    font-size: 1.5rem;
+    color: #000000;
+    margin: 1.875rem auto;        
+}
+
+/* page 2 peculiarities */
+.map-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    padding: 1.25rem;
+}
+
+.map-heading {
+    margin-bottom: 0.625rem;
+    font-size: 1.5em;
+    color: #000000;
+}
+
+.map {  
+    display: block;              
+    padding: 15px;               
+    margin: 1.25rem;               
+    border: 0.3125rem solid rgba(92, 147, 124, 1); 
+    border-radius: 15px;         
+    box-shadow: 0.0rem 0.25rem 0.625rem rgba(0, 0, 0, 0.2); 
+    max-width: 70%;           
+}
+    
+@media (max-width: 768px) {
+    .map-heading {
+        font-size: 1.2em;
+        margin-bottom: 0.5rem;
+    }
+
+    .map {
+        max-width: 100%;
+        border-radius: 6px;
+    }
+} 
+
+.bbqspot-title {
+    padding: 25px;             
+    border-radius: 16px; 
+    border-width: 8px;
+    border-style:dotted;        
+    width: fit-content;  
+    height: auto;              
+    background-color: rgba(92, 147, 124, 1);
+    color:#000000;
+    margin: 1.875rem auto; 
+}
+
+.bbqspot-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5rem 0;
+    flex-wrap: wrap;                  
+}
+
+.bbqspot-pic img {
+    width: 18.75rem;
+    height: 18.75rem;
+    margin: 1.25rem;                    
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.bbqspot-pic img:hover {
+    transform: scale(1.05);
+}
+.bbqspot-pic figure {
+    text-align: center; 
+    margin: 0; 
+}
+
+.bbqspot-pic figcaption {
+    margin-top: 0.5rem; 
+    font-size: 0.875rem; 
+    color: #000000; 
+}
+
+@media (max-width: .768px) {
+    .bbqspot-pic img {
+        width: 12.5rem;                 
+        height: 12.5rem;
+    }
+}
+
+/* page 3 peculiarities */
+
+.image-tips {
+    width: 25.0rem;         
+    height: 31.25rem;
+    border-radius: 15px;      
+    object-fit: cover;    
+    margin: 0.625rem;         /* I want to add some space between images */
+}
+
+@media (max-width: 768px) {
+    .info-section {
+        padding: 15px 0.625rem;     
+        font-size: 1.25rem;        
+        width: 90%;            
+    }
+}
+
+.transportation-info {
+    display: flex;
+    justify-content: center;      
+    padding: 1.25rem;
+    margin: 1.875rem;
+}
+
+.transportation-info .image {
+    width: 80%;       
+    margin:10vh;           
+    max-width: 75.0rem;             
+    height: auto;                 
+    border-radius: 8px; 
+    border-width: 8px;         
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out;   
+}
+
+.transportation-info .image:hover {
+    transform: scale(1.45);       
+}
+
+@media (max-width: 768px) {
+    .transportation-info .image {
+        width: 80%;               
+        max-width: 31.25rem;
+        margin: 1.25rem;        
+    }
+}
+
+/* page 4 peculiarities */
+
+.grill-items-table {
+    max-width: 50.0rem;               
+    margin: 0 auto;                
+    padding: 1.25rem;                
+}
+
+.grill-items-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'outfit', sans-serif;
+    border-radius: 15px 15px 0 0;            
+    overflow: hidden;              
+}
+
+.grill-items-table th, .grill-items-table td {
+    padding: 15px;
+    text-align: left;
+    border: 0.0625rem solid #ddd;         
+}
+
+.grill-items-table th {
+    background-color: rgba(216, 221, 207, 1);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.grill-items-table a {
+    color: rgba(9, 41, 34, 1);
+    text-decoration: none;
+}
+
+.grill-items-table a:hover {
+    text-decoration: underline;
+}
+.grill-items-table tr:nth-child(even) {
+    background-color: #CFF; /* I am using Light cyan background color for even rows as it says in the requirements, but if I could change it I would use green */
+}
+
+.grill-items-table tr:nth-child(odd) {
+    background-color: #FFF; /* I am using White background color for odd rows as it says in the requeriments */
+}
+
+@media (max-width: 768px) {
+    .grill-items-table table, 
+    .grill-items-table thead, 
+    .grill-items-table tbody, 
+    .grill-items-table th, 
+    .grill-items-table td, 
+    .grill-items-table tr {
+        display: block;
+    }
+
+    .grill-items-table thead {
+        display: none;
+    }
+
+    .grill-items-table tr {
+        margin-bottom: 15px;
+        border-bottom: 0.125rem solid #ddd;
+    }
+
+    .grill-items-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    /*I'm using this to set the data label for each cell.*/
+    .grill-items-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+.items-gallery {
+    display: flex;                       
+    justify-content: center;              
+    align-items: center;                  
+    flex-wrap: wrap;                     
+    padding: 1.25rem;                      
+}
+
+
+.item-gallery-image {
+    width: 100%;                          
+    max-width: 18.75rem;
+    height: 25.0rem;                    
+    margin: 0.625rem;                        
+    border-radius: 10px;                 
+    transition: transform 0.3s;          
+}
+
+/* Hover effect */
+.item-gallery-image:hover {
+    transform: scale(1.05);              
+}
+
+@media (max-width: 768px) {
+    .item-gallery-image {
+        max-width: 90%;                   
+    }
+}
+.meat-pictures {
+    display: flex;
+    justify-content: center;      
+    padding: 1.25rem;
+}
+
+.meat-pictures .image {
+    width: 80%;       
+    margin:5vh;            
+    max-width: 75.0rem;             
+    height: auto;                 
+    border-radius: 8px;          
+    border-width: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out;   
+}
+
+.meat-pictures .image:hover {
+    transform: scale(1.20);       
+}
+
+@media (max-width: 768px) {
+    .meat-pictures .image {
+        width: 90%;               
+        max-width: 31.25rem;         
+    }
+    .meat-pictures .image:hover {
+        transform: scale(1.25);       
+    }
+}
+
+/*I've tried to use the (overflow:hidden) to guarantee the container absorb my floated element inside to make it clean view.*/ 
+.float-section-default {
+    overflow: hidden; 
+    padding: 1rem;
+    max-width: 72rem;
+    margin: 1.5rem auto; 
+    background-color: rgba(92, 147, 124, 1);   
+    border-radius: 16px; 
+}
+.float-section-var {
+    overflow: hidden; 
+    padding: 1rem;
+    max-width: 72rem;
+    margin: 1.5rem auto; 
+    background-color: #D8DDCF;
+    border-radius: 16px; 
+}
+
+.float-image {
+    float: left; 
+    margin: 0 1rem 0.5rem 0; 
+    width: 200px; 
+    height: auto; 
+    border-radius: 4px; 
+}
+
+
+/* page 5 peculiarities */
+
+/* LINK STYLE FOR RULES */
+.rules-link {
+    color: rgba(0, 0, 255, 1);                  /* Link color */
+    text-decoration: none;           
+                  
+}
+
+.rules-link:hover {
+    text-decoration: underline;      
+}
+
+.bbq-rules-panel-section {
+    display: flex;
+    justify-content: center;   
+    align-items: center;      
+    height: 70vh;              
+    padding: 1.25rem;            
+}
+
+
+.rules-panel {
+    max-width: 50.0rem;          
+    width: 100%;              
+    height: auto;
+    padding: 0.625rem;            
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);  
+    background-color: rgba(92, 147, 124, 1);    
+    border-radius: 10px;       
+}
+
+.img-rules-panel {
+    max-width: 100%;          
+    border-radius: 10px;
+    width:auto;    
+}
+
+@media (max-width: 768px) {
+    .bbq-rules-panel-section {
+        height: 50vh;          
+        padding: 0.625rem;
+        
+    }
+
+    .img-rules-panel {
+        max-width: 90%;        
+    }
+}
+
+.rule-footer-pic {
+    display: flex;
+    gap: 0;
+  }
+
+.rule-footerpic {
+    width: 50%;
+    height: 50%;
+}
+
+/* page 6 peculiarities */
+
+.form-section {
+    display: flex;                    
+    justify-content: center;         
+    padding: 1.25rem;                   
+}
+
+.form {
+    background-color:  rgba(216, 221, 207, 1);       
+    border: 0.0625rem solid #ddd;          
+    border-radius: 10px;     
+    padding: 1.25rem;                    
+    width: 100%;                     
+    max-width: 37.5rem;                 
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); 
+}
+
+label {
+    display: block;                   
+    margin: 0.625rem 0 0.3125rem;              
+}
+
+.radiobutton {
+    display: flex;                    
+    align-items: center;              
+}
+
+.title-label {
+    margin-right: 0.625rem;               
+}
+
+.choice {
+    display: inline-block;            
+    margin-right: 1.25rem;            
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;                    
+    padding: 10px;                   
+    margin-bottom: 0.625rem;            
+    border: 1px solid #ccc;          
+    border-radius: 5px;              
+}
+
+input[type="submit"] {
+    background-color: rgba(92, 147, 124, 1);     
+    color: white;                    
+    border: none;                   
+    padding: 0.625rem 15px;              
+    border-radius: 5px;              
+    cursor: pointer;                  /* Pointer cursor on hover */
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(92, 147, 124, 1);      
+}
+
+@media (max-width: 768px) {
+    
+    .form {
+        padding: 15px;                
+    }
+}
+
+.contact-image-section {
+    display: flex;                   
+    justify-content: center;         
+    flex-wrap: wrap;                
+}
+
+.contact-image {
+    width: 25.0rem;                   
+    height: auto;                   
+    margin: 10vh 0.625rem;                 
+    border-radius: 15px;
+}           
+
+@media (max-width: 768px) {
+    .contact-image-section {
+        flex-direction: column;     
+        align-items: center;        
+    }
+
+    .contact-image {
+        width: 100%;                 
+        max-width: 18.75rem;            
+        margin: 5vh 0;              
+    }
+}
+    
